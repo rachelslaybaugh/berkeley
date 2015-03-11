@@ -33,7 +33,7 @@ the open source project [PyNE](http://pyne.io). Prof. Slaybaugh was awarded the
 
 ## Testing
 
-Today's presentation can be found [here](http://rachelslaybaugh.github.io/berkeley/images/2015.03.11-presentation.pdf).
+Today's presentation can be found [here](http://thehackerwithin.github.io/berkeley/images/2015.03.11-presentation.pdf).
 
 ## Lightning Talks 
 
