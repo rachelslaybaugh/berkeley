@@ -1,27 +1,24 @@
 ---
 layout: post
-title: R - Rochelle Terman, Daniel Turek, Chris Paciorek
+title: R - Rochelle Terman, Daniel Turek
 comments: true
-category: upcoming
+category: posts
 tags: meeting r
 ---
 
 
 ## Attending
 
-- <++>
+- about 25
 
 ## Rochelle Terman
 
-<+ speaker bio +> 
+[Rochelle](http://rochelleterman.com/) is a Ph.D. Candidate in Political Science at the University of California, Berkeley.
 
 ## Daniel Turek
 
-<+ speaker bio +> 
+Daniel Turek is a statistician and BIDS fellow. 
 
-## Chris Paciorek
-
-<+ speaker bio +> 
 
 ## R
 
@@ -29,7 +26,7 @@ R is a high-level programming language for statistical analysis.
 
 <+ notes +>
 
-Code examples can be found [here][code].
+Rochelle's demonstration code and notes can be found in this [github repo](https://github.com/rochelleterman/R-hacker-within)
 
 ## Lightning Talks 
 
