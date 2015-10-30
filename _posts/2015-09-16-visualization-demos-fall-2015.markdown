@@ -2,7 +2,7 @@
 layout: post
 title: Visualization - John Naulty, Ross Barnowski, Biye Jiang, Jennifer Jones
 comments: true
-category: upcoming
+category: posts
 tags: meeting plotting python r 
 ---
 
@@ -56,7 +56,7 @@ There are several scenarios in which pyqtgraph is definitely worth looking into:
 
 ## Jennifer Jones
 
-Bio
+This is my Bio
 
 ## [Biye Jiang](http://byeah.github.io/)
 

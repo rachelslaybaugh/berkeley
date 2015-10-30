@@ -2,7 +2,7 @@
 layout: post
 title: GPUs and Parallelization - Biye Jiang, Aaron Culich 
 comments: true
-category: upcoming
+category: posts
 tags: meeting hardware hpc
 ---
 
@@ -19,27 +19,77 @@ tags: meeting hardware hpc
 
 ## Biye Jiang
 
-Bio
+[Biye Jiang](https://byeah.github.io/) is a PhD student at UC Berkeley in the 
+CS department working with John Canny. 
 
 ## Aaron Culich
 
-Bio
+Aaron is a research computing architect at Berkeley. 
 
+## Discussion: GPUs and Parallelization
 
-## Discussion: Topic Description
+Today's topic is about GPUs and parallelism. 
 
-Please insert your topic description here. **Bold** text, _italic_ text, 
-[hyperlinks](www.google.com), and other markup follow markdown syntax. 
+### Survey of Needs and Resources -- Aaron Culich
 
-Please place any tutorial materials in the 
-[master branch of this repository](https://github.com/thehackerwithin/berkeley/tree/master) 
-and link to them from this post 
-[like so](https://github.com/thehackerwithin/berkeley/tree/master/IPython). 
-For help 
-and questions, please 
-[file an issue](https://github.com/thehackerwithin/berkeley/issues/new) 
-or email Katy.
+Aaron referenced a presentation on this topic. It can be found 
+[here](http://parlab.eecs.berkeley.edu/sites/all/parlab/files/BootCamp_Computational_Patterns_Demmel_final_12v2.pdf).
 
+Aaron started this presentation with a survey of what the attendees are 
+actually using.
+
+- GPUs? 3 folks.
+- Other Parallelization? Lots of folks.
+
+### Python Parallelism
+
+It was mentioned that, for some folks, python is the language of choice. The 
+Python Multiprocessing module was mentioned. This was the topic of a THW 
+session last year. The THW resources on this topic can be found 
+[here](https://github.com/thehackerwithin/berkeley/blob/master/python_concurrency). 
+That session was not on GPUs, however, the python threading module can be used 
+in conjuction with PyCUDA, a python module for GPUs. 
+
+### Research IT -- Krishna Muriki
+
+[Research IT](research-it.berkeley.edu) is available as a resource for 
+individuals who would like to test their code on GPU resources. Krishna 
+Muriki expresses that there is an institutional shared linux cluster (Savio). 
+Within that cluster, there are 6 compute nodes with 4 kepler GPUs each.
+Those nodes are in testing and BRC is interested and open to new users.
+
+### Java runtime engine -- Oliver
+
+Oliver at ESPM has a javascript modeling project for agent based population 
+models. They are working to make their software scalable from the desktop to 
+the level of higher performance computing. The NOVA stack and 
+[XSEDE](https://www.xsede.org/) resources 
+are core to their efforts. 
+
+### Scala Demo -- Biye Jiang
+
+Biye demonstrated the speed of GPUs by conducting a matrix multiplication using 
+GPUs versus conducting the same multiplication using CPUs. 
+
+### GPU Discussion
+
+Biye shared some of the diagrams from [this 
+presentation](http://on-demand.gputechconf.com/gtc/2014/presentations/S4811-extreme-machine-learning-with-gpus.pdf).
+
+He noted 
+
+- GPUs give excellent speed, 
+- but GPU memory latency is also an issue. 
+- So the throughput is high, but so is the memory latency.  
+- If you want your GPU code to run quickly, optimize for throughput. 
+- Always remember, GPU memory access is slower than computation. 
+- Moving data between the GPU and the main memory should be avoided.
+
+### GPU BIDMat demo
+
+Biye presented an ipython notebook to demostrat how BIDMat works. 
+
+The ipython notebook demos are [here](https://github.com/BIDData/BIDMach/blob/master/tutorials/).
 
 ## Lightning Talks
 
