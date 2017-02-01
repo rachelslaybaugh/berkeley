@@ -6,21 +6,26 @@ title: "About"
 <!-- You can edit this whole page, remove it, or use it as basis for any non-post pages you have. -->
 <section class="content">
 
-The {{ site.name }}, {{ site.chapter }}
-========================================
+# The {{ site.name }}, {{ site.chapter }}
 
 <ul class="listing">
 <li>
-<span>Spring 2016</span><a href="{{ site.url }}/upcoming.html">Upcoming Topics</a>
+<span>Spring 2017</span><a href="{{ site.url }}/upcoming.html">Upcoming Topics</a>
 </li>
+  {% assign upcoming = (site.posts | where: "category" , "upcoming") %}
+  {% for post in upcoming reversed %}
+    {% if forloop.first %}
+	<li style="text-indent: 2em;">
+		<span>{{ post.date | date: "%B %e, %Y" }}</span> Next topic: <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+	</li>
+    {% endif %}
+  {% endfor %}
 <li>
-<span>2013-2015</span><a href="{{ site.url }}/previous.html">Previous Topics</a>
+<span>2014-2016</span><a href="{{ site.url }}/previous.html">Previous Topics</a>
 </li>
 </ul>
 
-
-What:
------
+## What:
 
 This is a weekly meeting for sharing skills and best practices for
 scientific computation. In these friendly sessions, peers at all levels
@@ -32,41 +37,34 @@ showing off useful features of a scientific library or programming
 language you're using, or bringing up a computational problem you're
 having.
 
-Where:
------
-
-
-
-This meeting takes place at the [Berkeley Institute for Data
-Science](https://bids.berkeley.edu).
-
-Room 190, Doe Library, The University of California - Berkeley
-
-
-Who:
------
+## Who:
 
 Anyone interested in software development best practices is welcome to
 come to our meetings.
 
+## Where:
 
-When:
------
+This meeting takes place Tuesdays at 4pm at the [Berkeley Institute for Data
+Science](https://bids.berkeley.edu). Room 190, Doe Library, The University of California - Berkeley.
 
+## When:
 
-Wednesdays at 4:00pm. While the main talk should occupy less than an hour, the
-lightning talks and hacking session can go on until 6:00pm or later. See the [upcoming topics list]({{ site.url }}/upcoming.html)
+Tuesdays at 4:00pm. While the main talk should occupy less than an hour, the
+lightning talks and hacking session usually go on until 5:30pm. See the [upcoming topics list]({{ site.url }}/upcoming.html)
 or the [calendar](http://bit.ly/1cqFKuh)
 for the topic for this week.
-To keep up with meetings, you will want to
-[sign up for the mailing list](https://calmail.berkeley.edu/manage/list/listinfo/ucb-hacker-within@lists.berkeley.edu).
 
+## How:
 
+### Communications
+* [Mailing list](https://groups.google.com/a/lists.berkeley.edu/forum/#!forum/ucb-hacker-within)
+* [Slack channel](http://thehackerwithin.slack.com) if you've got an account
+  * [Go here to get an invite to the slack channel](http://theslackerwithin.herokuapp.com) -- invite token "berkeley"
 
-How:
------
+### Participating:
 
 Participating is really easy.
+<ul>
 <li>At **4:00pm**, we gather and go through a round of introductions.
 New faces are always appearing!</li>
 <li>Next, a volunteer will give a **tutorial** or lead a
@@ -82,21 +80,14 @@ question of interest to the group.
 question to the group. If you have a bug you need help with, here's the
 place to ask many ears about it at once.
 </li>
+</ul>
 
-The Hacker Within relies on peer-driven teaching, so please volunteer to
-give one of these talks. To do so, just ping the listhost by email at
-[ucb-hacker-within@lists.berkeley.edu](mailto:ucb-hacker-within@lists.berkeley.edu).
-
-
-Why:
-------
-
+## Why:
 
 The tenets of scientiﬁc endeavor (e.g., data control, reproducibility,
 comprehensive documentation, and peer review) suffer in projects that fail
 to make use of current development tools such as unit testing, version
 control, automated documentation, and others.
-
 
 To avoid these pitfalls, this weekly meeting exists for sharing skills and best practices for
 computational scientific applications. This group is modeled after The
